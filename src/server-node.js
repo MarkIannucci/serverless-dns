@@ -620,6 +620,7 @@ function serveTCP(socket) {
 
   socket.on("data", (data) => {
     handleTCPData(socket, data, sb, host, flag);
+    log.d(data);
   });
 }
 
