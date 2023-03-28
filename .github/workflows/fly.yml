@@ -140,7 +140,7 @@ jobs:
 
       - name: create app if necessary
         run: |
-          flyctl status -a $FLY_APP || flyctl app create --name $FLY_APP --machines
+          flyctl status -a $FLY_APP || flyctl apps create --name $FLY_APP --machines
 
       - name: 🚢 Ship
         run: "flyctl deploy
