@@ -211,8 +211,6 @@ function systemUp() {
       .listen(portcheck, () => up("http-check", hcheck.address()));
     listeners.connmap.push(trapServerEvents(hcheck));
     listeners.servers.push(hcheck);
-    log.d("httpCheck succesful; skip machinesHeartbeat");
-    return;
   }
 
   machinesHeartbeat();
