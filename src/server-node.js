@@ -616,6 +616,7 @@ function serveTCP(socket) {
 
   machinesHeartbeat();
   log.d("----> DoT Cleartext request", host, flag);
+  log.d(socket);
 
   socket.on("data", (data) => {
     handleTCPData(socket, data, sb, host, flag);
