@@ -66,12 +66,6 @@ protocol = "tcp"
   handlers = ["tls"]
   port = 10555
 
-  [[services.tcp_checks]]
-  grace_period = "5s"
-  interval = "10s"
-  restart_limit = 3
-  timeout = "2s"
-
 # community.fly.io/t/5490/3
 [checks]
   [checks.up]
